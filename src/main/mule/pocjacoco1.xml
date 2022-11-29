@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<mule xmlns:http="http://www.mulesoft.org/schema/mule/http" xmlns="http://www.mulesoft.org/schema/mule/core"
+	xmlns:doc="http://www.mulesoft.org/schema/mule/documentation"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.mulesoft.org/schema/mule/core http://www.mulesoft.org/schema/mule/core/current/mule.xsd
+http://www.mulesoft.org/schema/mule/http http://www.mulesoft.org/schema/mule/http/current/mule-http.xsd">
+	<http:listener-config name="HTTP_Listener_config" doc:name="HTTP Listener config" doc:id="7ca25dc8-9728-496b-814b-8f5ffa4a3d05" >
+		<http:listener-connection host="localhost" port="8086" />
+	</http:listener-config>
+	<flow name="pocjacoco1Flow" doc:id="41b1cbb4-fb92-4b99-ba7e-7f5addef8aad" >
+		<http:listener doc:name="Listener" doc:id="117017ba-9f74-44af-b99c-53fd12cee62b" config-ref="HTTP_Listener_config" path="/api" allowedMethods="GET"/>
+		<set-payload value='#["Hello Mundo"]' doc:name="Set Payload" doc:id="0414f91b-cc70-4473-b547-12beeee91440" />
+		<logger level="INFO" doc:name="Logger" doc:id="eed68856-fd6c-4882-b53a-7ba9d13d76c1" message="#[payload]"/>
+	</flow>
+</mule>
