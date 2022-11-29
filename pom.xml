@@ -77,6 +77,12 @@
 									<goal>report</goal>
 								</goals>
 							</execution>
+							<execution>
+								<id>coverage-report</id>
+								<goals>
+									<goal>coverage-report</goal>
+								</goals>
+							</execution>
 						</executions>
 					</plugin>
 				</plugins>
