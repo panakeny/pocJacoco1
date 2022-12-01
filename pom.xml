@@ -78,9 +78,9 @@
 								</goals>
 							</execution>
 							<execution>
-								<id>coverage-report</id>
+								<id>report-integration</id>
 								<goals>
-									<goal>coverage-report</goal>
+									<goal>report-integration</goal>
 								</goals>
 							</execution>
 						</executions>
